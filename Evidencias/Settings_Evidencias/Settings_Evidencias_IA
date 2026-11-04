@@ -1,6 +1,6 @@
 Problema inicial: Las rutas protegidas funcionaban cuando probábamos en el navegador, pero nos dimos cuenta de que Django estaba validando la sesión web (cookies del admin) en lugar de exigir estrictamente el token JWT en las peticiones de la API.
 
-Prompt: "Instalé djangorestframework-simplejwt y protegí mis vistas con @permission_classes([IsAuthenticated]). Sin embargo, la API parece no validar el token correctamente en Postman o usa la sesión del navegador. ¿Qué me falta configurar?"
+Prompt: Instalé djangorestframework-simplejwt y protegí mis vistas con @permission_classes([IsAuthenticated]). Sin embargo, la API parece no validar el token correctamente en Postman o usa la sesión del navegador. ¿Qué me falta configurar?
 
 Respuesta recibida: La IA indicó que faltaba declarar la configuración global en settings.py. Nos entregó el bloque de código REST_FRAMEWORK con DEFAULT_AUTHENTICATION_CLASSES apuntando a JWTAuthentication, además de la configuración de tiempos de expiración en SIMPLE_JWT.
 

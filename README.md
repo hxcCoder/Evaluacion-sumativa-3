@@ -1,4 +1,4 @@
-# Mi Proyecto Automotriz - Evaluación Sumativa 2
+# Mi Proyecto Automotriz - Evaluación Sumativa 3
 
 ## Propósito y Proyección
 Este proyecto es una aplicación backend funcional desarrollada en Django, conectada a una base de datos PostgreSQL. Permite gestionar un catálogo automotriz utilizando operaciones CRUD, validaciones de seguridad y administración desde el panel de Django.
@@ -70,3 +70,65 @@ Para probar los endpoints protegidos de la API REST mediante Postman o Insomnia:
 
 > **Nota de Seguridad:** Las solicitudes protegidas requieren el envío del token de acceso en el encabezado HTTP de la petición:
 > `Authorization: Bearer <tu_access_token>`
+
+--
+
+*Validación y Pruebas de la API REST*
+
+Las pruebas de los endpoints fueron realizadas utilizando Postman, verificando el funcionamiento de las operaciones CRUD y la autenticación mediante JWT.
+
+Se realizaron las siguientes pruebas:
+
+- Obtener token JWT mediante /api/token/.
+
+- Consultar listado de vehículos mediante GET sin autenticación.
+
+- Consultar detalle de vehículo mediante GET con token JWT.
+
+- Crear vehículo mediante POST con token JWT.
+
+- Actualizar vehículo mediante PUT con token JWT.
+
+- Eliminar vehículo mediante DELETE con token JWT.
+
+- Verificar rechazo de solicitudes POST sin autenticación.
+
+- Verificar rechazo de datos inválidos durante la creación de vehículos.
+
+- Verificación de Base de Datos
+
+Se comprobó la persistencia de los registros mediante PostgreSQL y el panel administrativo de Django (/admin/), verificando que las operaciones realizadas desde la API se reflejen correctamente en la base de datos.
+
+--
+
+*Tecnologías Utilizadas*
+
+- Python
+
+- Django
+
+- Django REST Framework
+
+- PostgreSQL
+
+- Simple JWT
+
+- Postman
+
+--
+
+*Documentación y Evidencias*
+
+El informe de evaluación inclu*ye capturas de pantalla de las pruebas realizadas en Postman, configuración del proyecto, autenticación JWT y verificación de registros en PostgreSQL y Django Admin.
+
+--
+
+*Consideraciones de Seguridad*
+
+- Las credenciales de base de datos se configuran mediante variables de entorno.
+
+- El archivo .env no debe subirse al repositorio.
+
+- Las operaciones de escritura y modificación de vehículos requieren autenticación JWT.
+
+- Se recomienda utilizar una clave secreta segura en ambientes de producción.

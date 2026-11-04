@@ -1,11 +1,11 @@
-. Descripción del Problema / Objetivo:
+Descripción del Problema / Objetivo:
 Garantizar la seguridad en las operaciones de escritura (POST) de la API REST de la aplicación Autos, restringiendo la creación de recursos únicamente a usuarios autenticados, mientras se permite la lectura pública (GET).
 
-2. Prompt / Consulta enviada a la IA:
+2Prompt / Consulta enviada a la IA:
 
 "¿Cómo puedo proteger el método POST en mis vistas de Django REST Framework para que solo los usuarios autenticados puedan crear vehículos, pero manteniendo el GET público?"
 
-3. Respuesta de la Inteligencia Artificial:
+3Respuesta de la Inteligencia Artificial:
 La IA indicó la implementación del decorador @permission_classes de Django REST Framework junto con la clase IsAuthenticatedOrReadOnly en el archivo Autos/views.py:
 
 
